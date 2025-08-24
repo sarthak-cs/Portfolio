@@ -304,23 +304,24 @@ header {
     inherits: false;
 }
 
-.card::after,
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-    animation: spin 3s linear infinite;
-    z-index: -1;
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 5px;
+  border-radius: 10px;
+  animation: 5s spin linear infinite;
 }
 
 .card::before {
     filter: blur(1.5rem);
-    opacity: 1b;
+    opacity: 0.8;
 }
 
 @keyframes spin {
@@ -595,4 +596,5 @@ footer .social-links {
     footer {
         font-size: 12px;
     }
+
 }
