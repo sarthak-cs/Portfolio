@@ -556,7 +556,10 @@ footer .social-links {
     .resume {
         animation: none;
     } */
+    .card::after, .card::before{
+        display: none;
 
+    }
     .about-text h1 {
         font-size: 40px;
     }
@@ -598,3 +601,4 @@ footer .social-links {
     }
 
 }
+
